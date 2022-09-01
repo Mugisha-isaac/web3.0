@@ -1,21 +1,25 @@
-
-import {Navbar,Services,Transactions,Welcome,Footer} from '../components/index';
-
+import {
+  Navbar,
+  Services,
+  Transactions,
+  Welcome,
+  Footer,
+} from "../components/index";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="min-h-screen">
-      <div className='gradient-bg-welcome'>
+      <div className="gradient-bg-welcome">
         <Navbar />
-        <Welcome/>  
+        <Welcome />
       </div>
-      <Services/>
-      <Transactions/>
-      <Footer/>
+      <Services />
+      <Transactions />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
