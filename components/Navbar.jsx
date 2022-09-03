@@ -3,20 +3,12 @@ import { HiMenuAlt4 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import logo from "/images/logo.png";
 
-
-const NavbarItem = ({title,classProps}) =>{
-   return (
-      <li className={`mx-4 cursor-pointer ${classProps}`}>
-         {title}
-      </li>
-   )
-}
+const NavbarItem = ({ title, classProps }) => {
+  return <li className={`mx-4 cursor-pointer ${classProps}`}>{title}</li>;
+};
 
 const Navbar = () => {
-
-
-  const [toggleMenu,setToggleMenu] = React.useState(false);
-
+  const [toggleMenu, setToggleMenu] = React.useState(false);
 
   return (
     <nav className="w-full flex md:justify-center  items-center p-4 ">
@@ -24,25 +16,37 @@ const Navbar = () => {
         <img src={logo} alt="Logo" className="w-32 cursor-pointer" />
       </div>
       <ul className="text-white md:flex  list-none flex-row justify-center items-center flex-initial ">
-          {
-          ["Market", "Exchange", "Tutorials", "Wallets"].map((item,index)=>(
-              <NavbarItem key={item + index} title={item}  />
-          ))
-          }
-          <li className="bg-blue-600 py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-blue-500">
-            Login
-          </li>
+        {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
+          <NavbarItem key={item + index} title={item} />
+        ))}
+        <li className="bg-blue-600 py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-blue-500">
+          Login
+        </li>
       </ul>
       <div className="flex relative">
-          {
-          toggleMenu ? <AiOutlineClose fontSize={28} className="text-white md:hidden cursor-pointer" onClick={()=> setToggleMenu(false)}/> : <HiMenuAlt4 fontSize={28} className="text-white md:hidden cursor-pointer" onClick={()=> setToggleMenu(true)} />}
-          {
-            toggleMenu && (
-              <ul className="text-xl w-full my-2 ">
-                <AiOutlineClose onClick={()=> setToggleMenu(false)} />
-              </ul>
-            )
-          }
+        {toggleMenu ? (
+          <AiOutlineClose
+            fontSize={28}
+            className="text-white md:hidden cursor-pointer"
+            onClick={() => setToggleMenu(false)}
+          />
+        ) : (
+          <HiMenuAlt4
+            fontSize={28}
+            className="text-white md:hidden cursor-pointer"
+            onClick={() => setToggleMenu(true)}
+          />
+        )}
+        {toggleMenu && (
+          <ul className="text-xl w-full my-2 ">
+            <li>
+              <AiOutlineClose
+                className="text-white md:hidden cursor-pointer"
+                onClick={() => setToggleMenu(false)}
+              />
+            </li>
+          </ul>
+        )}
       </div>
     </nav>
   );
