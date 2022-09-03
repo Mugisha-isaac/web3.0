@@ -15,7 +15,7 @@ const Navbar = () => {
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
         <img src={logo} alt="Logo" className="w-32 cursor-pointer" />
       </div>
-      <ul className="text-white md:flex  list-none flex-row justify-center items-center flex-initial ">
+      <ul className="text-white md:flex hidden  list-none flex-row justify-center items-center flex-initial ">
         {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
           <NavbarItem key={item + index} title={item} />
         ))}
@@ -45,6 +45,15 @@ const Navbar = () => {
                 onClick={() => setToggleMenu(false)}
               />
             </li>
+            {["Market", "Exchange", "Tutorials", "Wallets"].map(
+              (item, index) => (
+                <NavbarItem
+                  key={item + index}
+                  title={item}
+                  classProps="my-2 text-lg"
+                />
+              )
+            )}
           </ul>
         )}
       </div>
