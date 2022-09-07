@@ -31,8 +31,28 @@ const Welcome = () => {
                    <div className={`rounded-tl-2xl ${commonStyles}`} style={{minHeight:'70px'}}>
                      Reliability
                    </div>
+                   <div className={commonStyles } style={{minHeight:'70px'}}>
+                       Security
+                   </div>
+                   <div className={`rounded-tr-2xl ${commonStyles}`} style={{minHeight:'70px'}}>
+                     Etherium
+                   </div>
+                   <div className={`rounded-bl-2xl ${commonStyles}`} style={{minHeight:'70px'}}>
+                     Web3.0
+                   </div>
+                   <div className={commonStyles } style={{minHeight:'70px'}}>
+                       Low fees
+                   </div>
+                   <div className={`rounded-br-2xl ${commonStyles}`} style={{minHeight:'70px'}}>
+                     Blockchain
+                   </div>
               </div>
           </div>
+              
+              <div>
+                
+              </div>
+
         </div>
    </div>
   )
