@@ -98,6 +98,24 @@ const Welcome = () => {
               type="text"
               handleChange={() => {}}
             />
+            <Input
+              placeholder="Amount (ETH)"
+              name="amount"
+              type="number"
+              handleChange={() => {}}
+            />
+            <Input
+              placeholder="Keyword (Gif)"
+              name="keyword"
+              type="text"
+              handleChange={() => {}}
+            />
+            <Input
+              placeholder="Enter Message"
+              name="message"
+              type="text"
+              handleChange={() => {}}
+            />
           </div>
         </div>
       </div>
