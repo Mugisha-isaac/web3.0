@@ -4,7 +4,7 @@ import {SiEthereum} from "react-icons/si";
 import {BsInfoCircle} from 'react-icons/bs';
 import {Loader} from './'
 
-const commonStyles = '';
+const commonStyles = "sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-2 border-gray-400  text-white";
 
 const Welcome = () => {
 
@@ -28,7 +28,9 @@ const Welcome = () => {
                 </p>
               </button>
               <div className='grid sm:grid-cols-3 grid-cols-2 w-full mt-10 '>
-                   <div className={`rounded-t1-2xl ${commonStyles}`}></div>
+                   <div className={`rounded-tl-2xl ${commonStyles}`} style={{minHeight:'70px'}}>
+                     Reliability
+                   </div>
               </div>
           </div>
         </div>
